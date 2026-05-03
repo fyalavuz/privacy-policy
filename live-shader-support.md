@@ -1,6 +1,6 @@
-# Shader Showcase TV Support
+# Live Shader Support
 
-Shader Showcase TV is a native Apple TV visual app for realtime Metal shader effects.
+Live Shader is a native Apple TV visual app for realtime Metal shader effects.
 
 ## Controls
 
@@ -12,7 +12,7 @@ Shader Showcase TV is a native Apple TV visual app for realtime Metal shader eff
 
 ## Privacy
 
-Shader Showcase TV does not collect personal data in version 1.0.
+Live Shader does not collect personal data in version 1.0.
 
 ## Contact
 
