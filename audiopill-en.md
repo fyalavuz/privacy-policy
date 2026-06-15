@@ -1,10 +1,10 @@
 # AudioPill Privacy Policy
 
-**Last updated: April 25, 2026**
+**Last updated: June 15, 2026**
 
 ## Overview
 
-AudioPill is a home theater audio calibration application for Apple TV developed by Fırat Yalavuz. This privacy policy explains how we handle information when you use AudioPill.
+AudioPill is a home theater setup checker and audio diagnostic utility for Apple TV developed by Fırat Yalavuz. This privacy policy explains how we handle information when you use AudioPill.
 
 ## Data We Do Not Collect
 
@@ -19,7 +19,7 @@ AudioPill does not collect, store, transmit, or share any personal information. 
 
 ## How the App Works
 
-AudioPill operates entirely on your Apple TV device. All calibration settings, test results, and user preferences are stored locally on the device only. No data leaves your device.
+AudioPill operates entirely on your Apple TV device. All settings, setup-check summaries, and user preferences are stored locally on the device only. No data leaves your device.
 
 ## Third-Party Services
 
