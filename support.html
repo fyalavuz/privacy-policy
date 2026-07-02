@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support</title>
+<style>
+  :root { --primary:#2563eb; --bg:#eef2f9; --card:#fff; --text:#0f172a; --muted:#64748b; --border:#e2e8f0; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 20px 64px; }
+  header { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .logo { width:44px; height:44px; border-radius:10px; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; font-size:24px; }
+  h1 { font-size:28px; margin:0; }
+  .tag { color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:20px; }
+  h2 { font-size:19px; margin:0 0 12px; }
+  details { border-bottom:1px solid var(--border); padding:10px 0; }
+  details:last-child { border-bottom:none; }
+  summary { font-weight:600; cursor:pointer; }
+  details p { color:var(--muted); margin:8px 0 0; }
+  label { display:block; font-weight:600; font-size:14px; margin:14px 0 4px; }
+  input, textarea { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font:inherit; background:#f8fafc; }
+  textarea { min-height:120px; resize:vertical; }
+  button { margin-top:16px; background:var(--primary); color:#fff; border:none; border-radius:8px; padding:12px 22px; font:inherit; font-weight:700; cursor:pointer; }
+  button:hover { opacity:.92; }
+  .ok { display:none; margin-top:14px; padding:12px; border-radius:8px; background:#ecfdf5; color:#065f46; font-weight:600; }
+  .alt { color:var(--muted); font-size:14px; margin-top:14px; }
+  a { color:var(--primary); }
+  footer { color:var(--muted); font-size:13px; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" id="emoji">📱</div>
+    <h1 id="title">Support</h1>
+  </header>
+  <p class="tag" id="tagline"></p>
+
+  <div class="card">
+    <h2>Frequently asked questions</h2>
+    <div id="faq"></div>
+  </div>
+
+  <div class="card">
+    <h2>Contact us</h2>
+    <p style="color:var(--muted); margin-top:0">Question, bug report, or feature idea? Send a message — we typically reply within 2 business days.</p>
+    <form id="f" action="https://formsubmit.co/ajax/yalavuz@gmail.com" method="POST">
+      <input type="hidden" name="_subject" id="subj" value="App support request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="app" id="appfield" value="">
+      <label for="name">Name</label>
+      <input id="name" name="name" required autocomplete="name">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required autocomplete="email">
+      <label for="msg">Message</label>
+      <textarea id="msg" name="message" required></textarea>
+      <button type="submit">Send message</button>
+      <div class="ok" id="ok">✅ Your message has been sent. We'll get back to you by email.</div>
+    </form>
+    <p class="alt">Prefer email? Write to us directly at <a id="mailto" href="mailto:yalavuz@gmail.com">yalavuz@gmail.com</a>.</p>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const COMMON_FAQ = [
+  ["Is my personal data collected?", "No. This app does not collect, store, or share personal data. See the privacy policy linked below for details."],
+  ["Something is not working — what should I try first?", "Force-quit the app and reopen it, then restart the device. If the problem persists, use the contact form below and describe what you tapped and what happened — a screenshot or photo helps a lot."],
+];
+
+const APPS = {
+  lingoffline: {
+    name: "Lingoffline", emoji: "🌐", privacy: "lingoffline-en",
+    tagline: "Offline phrasebook between 35 languages — 400+ everyday sentences, spoken aloud, always available.",
+    faq: [
+      ["Does the app really work offline?", "Yes. All 35 languages and every sentence are bundled inside the app. No internet connection is ever required."],
+      ["How do I change my languages?", "Tap the language icon in the top-right corner of the home screen, then pick the language you speak and the language you want to say things in. You can swap them any time."],
+      ["The Listen button is silent for some languages.", "Pronunciation uses the voices installed on your iPhone. If a language stays silent, open iOS Settings → Accessibility → Spoken Content → Voices and download a voice for that language."],
+      ["How do I copy a sentence?", "Open any sentence and tap Copy under either language. The text is placed on your clipboard, ready to paste anywhere."],
+      ["What happened to İngilizce Rehberi?", "İngilizce Rehberi grew up: it is now Lingoffline and works between any two of 35 languages — Turkish→English included, exactly as before."],
+    ],
+  },
+  audiopill: {
+    name: "AudioPill", emoji: "🔊", privacy: "audiopill-en",
+    tagline: "Home theater setup checker and audio diagnostic utility for Apple TV.",
+    faq: [
+      ["A speaker test plays no sound on one channel.", "First check the same channel with another source (e.g. a movie with surround sound). If only AudioPill is silent, make sure your Apple TV audio output is set to the receiver/soundbar (Settings → Video and Audio → Audio Output) and not to TV speakers."],
+      ["Surround formats are not detected.", "Apple TV converts audio according to its own output settings. Set Audio Format on the Apple TV to Auto (or enable Dolby Atmos) under Settings → Video and Audio, then rerun the check."],
+    ],
+  },
+  "live-shader": {
+    name: "Live Shader", emoji: "🎨", privacy: "live-shader-en",
+    tagline: "Live animated shader visuals for Apple TV.",
+    faq: [
+      ["Animation is stuttering.", "Close other apps running in the background and restart the Apple TV. Older Apple TV models render heavy shaders at a lower frame rate."],
+    ],
+  },
+  "sudoku-tvos": {
+    name: "Sudoku for Apple TV", emoji: "🔢", privacy: "sudoku-tvos-en",
+    tagline: "Sudoku designed for the big screen, with profiles, statistics and daily streaks.",
+    faq: [
+      ["Where is my progress stored?", "All game progress, statistics, streaks and profiles are stored locally on your Apple TV. They never leave the device — which also means deleting the app deletes your progress."],
+    ],
+  },
+  netpital: {
+    name: "Netpital", emoji: "🏥", privacy: "netpital.en",
+    tagline: "Netpital mobile app.",
+    faq: [],
+  },
+  "public-ip-tv": {
+    name: "Public IP TV", emoji: "📺", privacy: "public-ip-tv-en",
+    tagline: "Publicly available IPTV streams on your Apple TV.",
+    faq: [
+      ["A channel does not play or keeps buffering.", "The app plays publicly available streams; broadcasters change or drop them over time, and availability can differ by country. Try the channel again later, and check that other channels play — if everything buffers, test your internet connection speed."],
+    ],
+  },
+  sneyk: {
+    name: "Sneyk", emoji: "🐍", privacy: "sneyk-en",
+    tagline: "Offline snake game for Apple TV.",
+    faq: [
+      ["Does it need internet?", "No — Sneyk is fully offline. Scores are kept locally on your Apple TV."],
+    ],
+  },
+  "test-your-tv": {
+    name: "Test Your TV", emoji: "🖥️", privacy: "test-your-tv-en",
+    tagline: "Screen and picture test patterns for your TV, on Apple TV.",
+    faq: [
+      ["What do I use the test patterns for?", "Use the patterns to spot dead pixels, check uniformity, and tune brightness, contrast and color on your TV's own picture settings while the pattern is on screen."],
+    ],
+  },
+  winiso2usb: {
+    name: "WinISO2USB", emoji: "💾", privacy: "WinISO2USB-en",
+    tagline: "Write bootable Windows ISO images to USB drives on macOS.",
+    faq: [
+      ["My USB drive is not listed.", "Unplug and replug the drive, avoid USB hubs, and make sure macOS sees it in Disk Utility first. Drives smaller than the ISO size are not shown."],
+      ["The USB does not boot on the PC.", "Enter the PC's boot menu (often F12/F11/Esc at power-on) and pick the USB explicitly. For older PCs, check whether the machine boots in UEFI or Legacy/BIOS mode and match it in your firmware settings."],
+    ],
+  },
+  "og-preview-lab": {
+    name: "OG Preview Lab", emoji: "🔍", privacy: "og-preview-lab-chrome-extension",
+    tagline: "Chrome extension for previewing Open Graph and Twitter card metadata.",
+    faq: [
+      ["The preview does not load for a page.", "Some pages block metadata fetching or render tags with JavaScript only. Try the public URL of the page (not a local/authenticated one) and reload the tab before opening the extension."],
+    ],
+  },
+};
+
+const slug = new URLSearchParams(location.search).get("app") || "";
+const app = APPS[slug] || { name: "Our Apps", emoji: "📱", privacy: "", tagline: "Support for apps by Fırat Yalavuz.", faq: [] };
+
+document.title = app.name + " — Support";
+document.getElementById("emoji").textContent = app.emoji;
+document.getElementById("title").textContent = app.name + " Support";
+document.getElementById("tagline").textContent = app.tagline;
+document.getElementById("subj").value = app.name + " support request";
+document.getElementById("appfield").value = app.name;
+document.getElementById("mailto").href = "mailto:yalavuz@gmail.com?subject=" + encodeURIComponent(app.name + " support");
+
+const faqEl = document.getElementById("faq");
+for (const [q, a] of [...app.faq, ...COMMON_FAQ]) {
+  const d = document.createElement("details");
+  const s = document.createElement("summary");
+  s.textContent = q;
+  const p = document.createElement("p");
+  p.textContent = a;
+  d.append(s, p);
+  faqEl.append(d);
+}
+
+const foot = document.getElementById("foot");
+if (app.privacy) {
+  const a = document.createElement("a");
+  a.href = "/privacy-policy/" + app.privacy;
+  a.textContent = "Privacy Policy";
+  foot.append(a, document.createTextNode(" · " + app.name + " never collects personal data — everything stays on your device."));
+} else {
+  foot.textContent = "Apps by Fırat Yalavuz.";
+}
+
+document.getElementById("f").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const f = e.target, btn = f.querySelector("button");
+  btn.disabled = true; btn.textContent = "Sending…";
+  try {
+    const r = await fetch(f.action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(f) });
+    if (!r.ok) throw new Error();
+    f.reset();
+    document.getElementById("ok").style.display = "block";
+    btn.textContent = "Sent";
+  } catch {
+    location.href = document.getElementById("mailto").href + "&body=" + encodeURIComponent(f.message.value);
+    btn.disabled = false; btn.textContent = "Send message";
+  }
+});
+</script>
+</body>
+</html>
