@@ -55,7 +55,7 @@
 
   <h2>3. Optional rewarded ads on iPhone and iPad</h2>
   <p>The iOS and iPadOS versions can offer an optional rewarded ad for virtual chips. The daily House Stake and normal gameplay do not require an ad. The app uses Google Mobile Ads and Google’s User Messaging Platform (“UMP”) for this feature.</p>
-  <p>When production ad identifiers are configured, UMP can contact Google at launch to determine which privacy notice or choices apply. The app asks UMP whether ads may be requested before loading an ad and provides an in-app Privacy Options entry point when Google reports that one is required. Ad inventory is discarded after a privacy-choice change.</p>
+  <p>When production ad identifiers are configured, UMP can contact Google at launch to determine which privacy notice or choices apply. The app asks UMP whether ads may be requested before loading an ad. If ads are permitted, the SDK starts and may preload a rewarded ad even if you do not choose to watch it. The app provides an in-app Privacy Options entry point when Google reports that one is required, and discards ad inventory after a privacy-choice change.</p>
   <p>According to Google, its Mobile Ads SDK may process:</p>
   <ul>
     <li>IP address, which may be used to estimate general location;</li>
@@ -64,7 +64,7 @@
     <li>app interactions related to ad performance; and</li>
     <li>crash, diagnostic, and performance information.</li>
   </ul>
-  <p>Google may use this information for ad delivery, frequency control, fraud prevention, measurement, analytics, and—where permitted by your choices and applicable law—personalization. Available modes can include personalized, non-personalized, limited, or technical ad delivery. Blackjack 21 does not request access to Apple’s App Tracking Transparency identifier in its current configuration.</p>
+  <p>Google may use this information for ad delivery, frequency control, fraud prevention, measurement, analytics, and—where permitted by your choices and applicable law—personalization. Available modes can include personalized, non-personalized, limited, or technical ad delivery. Blackjack 21 does not currently ask for permission to access Apple’s advertising identifier through App Tracking Transparency. This does not mean that Google processes no identifiers or tracking-related data.</p>
   <p>Google acts under its own terms and privacy practices. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>, <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google’s iOS data-disclosure guide</a>, and <a href="https://developers.google.com/admob/ios/privacy/ad-serving-modes">Google’s ad-serving modes</a>.</p>
 
   <h2>4. In-app purchases</h2>
