@@ -72,6 +72,20 @@ const COMMON_FAQ = [
 ];
 
 const APPS = {
+  blackjack: {
+    name: "Blackjack 21", emoji: "♠️", privacy: "blackjack-en.html",
+    privacySummary: "Gameplay stays local; Apple handles purchases, and optional iPhone/iPad rewarded ads use Google under your privacy choices.",
+    dataFaq: ["How does Blackjack 21 handle data?", "Your balance, progress, statistics and settings stay in the app container on your device. Apple handles optional purchases. On iPhone and iPad, Google may process ad and device data when checking privacy choices or serving an optional rewarded ad. See the privacy policy for details."],
+    tagline: "A focused solo blackjack table for iPhone, iPad, Apple TV, Mac and Apple Vision Pro.",
+    faq: [
+      ["Is this real-money gambling?", "No. Blackjack 21 is a simulated card game for entertainment. Virtual chips have no cash value and cannot be withdrawn, redeemed or transferred."],
+      ["Do I need an internet connection?", "Core gameplay works offline. An internet connection is needed to load or restore StoreKit purchases and, on iPhone or iPad, to load an optional rewarded ad."],
+      ["Do I have to watch ads to play?", "No. Rewarded ads are optional and only available on iPhone and iPad. The daily House Stake and normal gameplay never require an ad."],
+      ["Where is my progress stored?", "Balance, statistics, progress, rules and appearance settings are stored in the app container on this device. Deleting the app removes that local data; purchased non-consumables can be restored through Apple."],
+      ["How do I restore a purchase?", "Open Settings in Blackjack 21 and choose Restore Purchases. Make sure the device is signed in to the same Apple Account used for the purchase."],
+      ["How do I change ad privacy choices?", "Where a privacy-options entry point is required, open Settings in Blackjack 21 and choose Privacy Options. Changing a choice applies before the next ad request."],
+    ],
+  },
   lava: {
     name: "Lava", emoji: "🔥", privacy: "lava-en",
     tagline: "A lava lamp for iPhone, iPad, Apple TV, Apple Watch, Mac and Apple Vision Pro.",
@@ -171,7 +185,8 @@ document.getElementById("appfield").value = app.name;
 document.getElementById("mailto").href = "mailto:yalavuz@gmail.com?subject=" + encodeURIComponent(app.name + " support");
 
 const faqEl = document.getElementById("faq");
-for (const [q, a] of [...app.faq, ...COMMON_FAQ]) {
+const dataFaq = app.dataFaq || COMMON_FAQ[0];
+for (const [q, a] of [...app.faq, dataFaq, COMMON_FAQ[1]]) {
   const d = document.createElement("details");
   const s = document.createElement("summary");
   s.textContent = q;
@@ -186,7 +201,8 @@ if (app.privacy) {
   const a = document.createElement("a");
   a.href = "/privacy-policy/" + app.privacy;
   a.textContent = "Privacy Policy";
-  foot.append(a, document.createTextNode(" · " + app.name + " never collects personal data — everything stays on your device."));
+  const privacySummary = app.privacySummary || (app.name + " never collects personal data — everything stays on your device.");
+  foot.append(a, document.createTextNode(" · " + privacySummary));
 } else {
   foot.textContent = "Apps by Fırat Yalavuz.";
 }
