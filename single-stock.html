@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for Single Stock on iPhone, iPad, Apple TV, and Apple widgets.">
+<title>Single Stock Privacy Policy</title>
+<style>
+  :root { color-scheme: dark; --green:#45d483; --ink:#f4f7f5; --muted:#9daaa3; --panel:#111a16; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#080d0a; color:var(--ink);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:780px; margin:0 auto; padding:48px 24px 80px; }
+  h1 { font-size:30px; margin:0 0 4px; }
+  h2 { font-size:20px; margin:36px 0 10px; color:var(--green); }
+  .updated,.note { color:var(--muted); font-size:14px; }
+  .updated { margin:0 0 28px; }
+  .summary { background:var(--panel); border:1px solid #283b31; border-radius:14px; padding:18px 20px; }
+  ul { padding-left:22px; }
+  li { margin:6px 0; }
+  a { color:#79c9ff; }
+  footer { margin-top:48px; color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Single Stock Privacy Policy</h1>
+  <p class="updated">Last updated: August 20, 2026</p>
+
+  <section class="summary" aria-labelledby="summary-heading">
+    <h2 id="summary-heading" style="margin-top:0">At a glance</h2>
+    <ul>
+      <li>Single Stock works without an account, advertising, analytics, or cross-app tracking code.</li>
+      <li>Apple’s device, iCloud, and App Group storage hold your selected stock, display preference, daily-preview usage, and widget quote cache.</li>
+      <li>Yahoo Finance receives stock search and quote requests from Single Stock.</li>
+      <li>Apple processes optional Single Stock Pro subscriptions through StoreKit.</li>
+      <li>The support form sends us your name, email address, and message.</li>
+    </ul>
+  </section>
+
+  <h2>1. Scope</h2>
+  <p>Fırat Yalavuz develops Single Stock and operates its support page. We use this policy to describe data handling on iPhone, iPad, Apple TV, and the iPhone and iPad widgets. In this policy, “we” and “the developer” mean Fırat Yalavuz.</p>
+
+  <h2>2. Information stored by the app</h2>
+  <p>Single Stock uses Apple’s storage tools to save app state:</p>
+  <ul>
+    <li><strong>On-device storage:</strong> Single Stock stores the selected Yahoo Finance symbol, chart-line preference, and current UTC day’s preview usage with UserDefaults.</li>
+    <li><strong>Optional iCloud synchronization:</strong> Single Stock can sync the selected symbol and daily-preview usage between your devices through iCloud Key-Value Store. If the app cannot access iCloud, it reads and writes its local copy.</li>
+    <li><strong>Widget App Group:</strong> On iPhone and iPad, Single Stock copies the selected symbol and a compact last-quote cache into an App Group so the widget can read them. The cache can contain the symbol; company, exchange, and currency details; price data; market-session times; last-trade time; and fetch time. Single Stock omits the full intraday chart series from this cache.</li>
+  </ul>
+  <p>Single Stock sends none of this app state to a server run by the developer. Apple may keep copies in device backups or iCloud under your Apple settings and Apple’s policies.</p>
+  <p>Single Stock asks you for a stock name or symbol. It requests no access to your contacts, photos, precise location, microphone, or camera.</p>
+
+  <h2>3. Yahoo Finance searches and market quotes</h2>
+  <p>Single Stock needs an internet connection to search for stocks and retrieve market quotes. It sends Yahoo Finance:</p>
+  <ul>
+    <li>the stock name, symbol, or search text that you enter, plus your device’s current region and preferred-language identifier for search results; and</li>
+    <li>the selected Yahoo Finance symbol when the app requests a quote.</li>
+  </ul>
+  <p>Yahoo also receives network details such as your IP address and user-agent information. Single Stock configures an ephemeral URL session, so the app does not persist Yahoo cookies or URL cache data. Yahoo controls its processing and retention under its policies. The developer does not use Yahoo requests to build an advertising profile. Yahoo market quotes can lag by about 15 minutes.</p>
+  <p>Read the <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html">Yahoo Privacy Policy</a> for Yahoo’s practices and privacy choices.</p>
+
+  <h2>4. Subscriptions and Apple services</h2>
+  <p>Apple provides optional Single Stock Pro subscriptions through StoreKit. Apple processes your Apple Account, payment method, billing information, subscription history, and App Store records. Single Stock receives no payment-card number, Apple Account password, or billing address.</p>
+  <p>StoreKit gives Single Stock the product details, introductory-offer eligibility, purchase result, transaction verification, and current entitlement status needed to show, activate, restore, and maintain Pro access. The developer runs no subscription server.</p>
+  <p>Read <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store &amp; Privacy</a> and <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> for Apple’s data practices.</p>
+
+  <h2>5. Accounts, advertising, analytics, and tracking</h2>
+  <p>Single Stock creates no app account. It contains no advertising, analytics, or cross-app tracking code and does not access Apple’s advertising identifier. The developer does not sell personal information. Single Stock contacts Yahoo and Apple for the search, quote, iCloud, App Store, and StoreKit functions described in this policy.</p>
+
+  <h2>6. Support website and messages</h2>
+  <p>Use the <a href="single-stock-support.html">Single Stock support page</a> or send us an email. We receive the name, email address, message, and other details you choose to send. We use them to answer you, investigate bugs, block form abuse, and keep the support record.</p>
+  <p>FormSubmit sends the web form to the developer’s email inbox and states that it keeps submissions for up to 30 days. Email providers may keep delivered messages for support, security, or records that law requires. Keep brokerage credentials, payment-card details, financial account numbers, and other sensitive information out of support requests. Read <a href="https://formsubmit.co/privacy.pdf">FormSubmit’s privacy terms</a>.</p>
+  <p>GitHub Pages hosts the policy and support pages. GitHub may process request details under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+
+  <h2>7. Retention and your controls</h2>
+  <ul>
+    <li>Single Stock clears the previous symbol and quote cache before it stores a replacement.</li>
+    <li>Single Stock clears the selected symbol from local storage, iCloud Key-Value Store, and the widget App Group when you remove it. The app also clears the widget quote cache.</li>
+    <li>Single Stock keeps the chart-line preference on the device until you change it, reset app data, or delete the app.</li>
+    <li>Single Stock measures preview usage by UTC day. It ignores records from past days and overwrites them after you use another preview.</li>
+    <li>Deleting the app removes its current local container. Apple manages copies in iCloud, Apple-controlled backups, App Store purchase history, and subscription records through your settings and Apple Account.</li>
+    <li>Manage or cancel a subscription in App Store account settings.</li>
+  </ul>
+
+  <h2>8. Sharing and international processing</h2>
+  <p>We do not sell information that you submit to us. Yahoo processes stock search and quote requests. Apple provides device and App Group storage and may process data through iCloud, the App Store, and StoreKit. GitHub, FormSubmit, and email providers process support-site requests. Each provider may process information outside your country and applies its own retention, security, and legal duties.</p>
+
+  <h2>9. Your privacy rights</h2>
+  <p>Email us to ask about, correct, or delete information you sent in a support request. We may ask for details that identify the request and keep records when law requires. Send requests about data controlled by Apple, Yahoo, GitHub, FormSubmit, or your email provider to that provider.</p>
+  <p>Local law may give you rights to access, correct, delete, restrict, object to, or obtain a copy of personal information. You may also have the right to withdraw consent or complain to a data-protection authority.</p>
+
+  <h2>10. Children</h2>
+  <p>We do not target Single Stock to children under 13 or the minimum digital-consent age in their country, and we do not seek personal information from children. A parent or guardian who believes a child sent information through support can ask us to delete it.</p>
+
+  <h2>11. Security</h2>
+  <p>Apple’s device, App Group, and iCloud systems hold app state. Single Stock’s Yahoo requests and support website use HTTPS. Apple, Yahoo, GitHub, FormSubmit, and email providers apply their own security controls. Storage and transmission still carry risk.</p>
+
+  <h2>12. Changes</h2>
+  <p>We may update this policy when Single Stock, its service providers, or legal requirements change. We record the latest revision date at the top and will post material changes before or when the related feature ships.</p>
+
+  <h2>13. Contact</h2>
+  <p>For privacy questions or requests, email <a href="mailto:yalavuz@gmail.com?subject=Single%20Stock%20privacy">yalavuz@gmail.com</a>.</p>
+
+  <footer>Single Stock for Apple platforms · © 2026 Fırat Yalavuz</footer>
+</main>
+</body>
+</html>

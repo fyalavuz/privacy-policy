@@ -73,6 +73,21 @@ const COMMON_FAQ = [
 ];
 
 const APPS = {
+  "single-stock": {
+    name: "Single Stock", emoji: "📈", privacy: "single-stock.html",
+    privacySummary: "Single Stock uses Apple storage and Yahoo Finance quote services. It has no account, advertising, analytics, or tracking code.",
+    dataFaq: ["How does Single Stock handle data?", "Single Stock stores your selected symbol and preferences on the device. iCloud can sync the symbol and preview usage, and an App Group holds the widget quote cache. Yahoo receives search and quote requests. Apple handles subscriptions. The app creates no account and uses no advertising, analytics, or tracking code. Read the privacy policy for details."],
+    tagline: "Follow one stock full screen with delayed market quotes on iPhone, iPad, Apple TV, and Apple widgets.",
+    faq: [
+      ["Are the quotes real time?", "Yahoo Finance can delay quotes by about 15 minutes. Service or data problems can leave a quote unavailable, incomplete, or stale. Single Stock provides an informational display and no investment advice."],
+      ["Which features need an internet connection?", "Stock search, quote refreshes, StoreKit product details, purchases, and purchase restoration need internet access. A widget may show its labeled cached quote if a fresh request fails. Single Stock requires no app account."],
+      ["How does my selected stock sync?", "iCloud Key-Value Store syncs your selected symbol between iPhone, iPad, and Apple TV when available. Each device uses local storage if it cannot access iCloud. On iPhone and iPad, an Apple App Group shares the symbol and a compact quote cache with the widget."],
+      ["What is the daily preview?", "A non-subscriber can use up to five minutes of full-app preview access per UTC day. Opening the preview does not start an App Store trial, purchase, or renewal. iCloud can sync usage across devices."],
+      ["How do I change the tracked stock?", "Open Settings and choose Track a different stock. This clears the current selection and widget quote cache, returns you to the stock picker, and syncs the removal through iCloud when available."],
+      ["How do I restore, manage, or cancel Single Stock Pro?", "Use Restore Purchases in Single Stock Settings to refresh access. To manage or cancel the auto-renewable subscription, open your App Store account subscription settings. Apple handles billing and subscription records."],
+      ["How can I contact support?", "Email yalavuz@gmail.com with the subject “Single Stock support.” Include your device type, OS version, the stock symbol involved, and what happened. Keep brokerage credentials and financial account details out of the message."],
+    ],
+  },
   blackjack: {
     name: "Blackjack 21", emoji: "♠️", privacy: "blackjack-en.html",
     privacySummary: "Gameplay stays local; Apple handles purchases, and optional iPhone/iPad rewarded ads use Google under your privacy choices.",
