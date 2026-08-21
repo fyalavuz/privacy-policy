@@ -26,7 +26,7 @@
 <body>
 <main class="wrap">
   <h1>Blackjack 21 Privacy Policy</h1>
-  <p class="updated">Last updated: August 20, 2026</p>
+  <p class="updated">Last updated: August 21, 2026</p>
 
   <section class="summary" aria-labelledby="summary-heading">
     <h2 id="summary-heading" style="margin-top:0">At a glance</h2>
@@ -34,7 +34,7 @@
       <li>No account is required and the developer does not run an analytics or gameplay backend.</li>
       <li>Your balance, game history, settings, progress, and purchase-entitlement mirrors are stored in the app container on your device.</li>
       <li>Apple processes optional in-app purchases.</li>
-      <li>On iPhone and iPad only, Google may process data when checking privacy choices and serving an optional rewarded ad. Core play does not require watching an ad.</li>
+      <li>On iPhone and iPad only, Google may process data when checking privacy choices and serving an optional rewarded ad in Limited Ads mode. Core play does not require watching an ad.</li>
       <li>If you contact support, the information you submit is used to answer your request.</li>
     </ul>
   </section>
@@ -55,7 +55,7 @@
 
   <h2>3. Optional rewarded ads on iPhone and iPad</h2>
   <p>The iOS and iPadOS versions can offer an optional rewarded ad for virtual chips. The daily House Stake and normal gameplay do not require an ad. The app uses Google Mobile Ads and Google’s User Messaging Platform (“UMP”) for this feature.</p>
-  <p>When production ad identifiers are configured, UMP can contact Google at launch to determine which privacy notice or choices apply. The app asks UMP whether ads may be requested before loading an ad. If ads are permitted, the SDK starts and may preload a rewarded ad even if you do not choose to watch it. The app provides an in-app Privacy Options entry point when Google reports that one is required, and discards ad inventory after a privacy-choice change.</p>
+  <p>Before UMP or Google Mobile Ads is accessed, the app sets Google’s cookie-consent preference to zero, which forces Google’s Limited Ads mode. UMP can then contact Google at launch to determine which privacy notice or choices apply. The app asks UMP whether ads may be requested before loading an ad. If ads are permitted, the SDK starts and may preload a rewarded ad even if you do not choose to watch it. The app provides an in-app Privacy Options entry point when Google reports that one is required, and discards ad inventory after a privacy-choice change.</p>
   <p>According to Google, its Mobile Ads SDK may process:</p>
   <ul>
     <li>IP address, which may be used to estimate general location;</li>
@@ -64,7 +64,7 @@
     <li>app interactions related to ad performance; and</li>
     <li>crash, diagnostic, and performance information.</li>
   </ul>
-  <p>Google may use this information for ad delivery, frequency control, fraud prevention, measurement, analytics, and—where permitted by your choices and applicable law—personalization. Available modes can include personalized, non-personalized, limited, or technical ad delivery. Blackjack 21 does not currently ask for permission to access Apple’s advertising identifier through App Tracking Transparency. This does not mean that Google processes no identifiers or tracking-related data.</p>
+  <p>Every Blackjack 21 ad request is constrained to Google’s Limited Ads mode. The app also disables Google publisher personalization and publisher first-party ID. According to Google, Limited Ads disables personalization and features that require a local identifier. The app does not request permission to access Apple’s advertising identifier through App Tracking Transparency. Google may still use IP addresses to deliver an ad and may process ad, interaction, crash, performance, and diagnostic information. Limited Ads is not a claim that Google processes no data.</p>
   <p>Google acts under its own terms and privacy practices. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>, <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google’s iOS data-disclosure guide</a>, and <a href="https://developers.google.com/admob/ios/privacy/ad-serving-modes">Google’s ad-serving modes</a>.</p>
 
   <h2>4. In-app purchases</h2>
@@ -83,6 +83,7 @@
   <ul>
     <li>You can play without choosing to watch a rewarded ad.</li>
     <li>Where required, open Settings in the app and choose <strong>Privacy Options</strong> to review Google ad choices.</li>
+    <li>Choose <strong>Report an Ad</strong> in Settings at any time to open the support form for an inappropriate ad or advertising issue.</li>
     <li>You can delete locally stored app data by deleting the app. Purchased non-consumables may remain in Apple’s purchase history and can be restored.</li>
     <li>You can contact us to ask about, correct, or delete information you sent directly in a support request. We may need enough information to locate the request and may retain records where legally required.</li>
     <li>Requests about data controlled by Apple, Google, GitHub, FormSubmit, or your email provider should also be directed to that provider through the linked privacy resources.</li>
