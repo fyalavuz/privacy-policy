@@ -1,33 +1,35 @@
-# AudioPill Privacy Policy
+# Test Your Speakers Privacy Policy
 
-**Last updated: June 15, 2026**
+**Last updated: August 23, 2026**
 
 ## Overview
 
-AudioPill is a home theater setup checker and audio diagnostic utility for Apple TV developed by Fırat Yalavuz. This privacy policy explains how we handle information when you use AudioPill.
+Test Your Speakers is a listening-based home theater speaker checker for Apple TV, developed by Fırat Yalavuz. This policy explains how information is handled when you use the app.
 
 ## Data We Do Not Collect
 
-AudioPill does not collect, store, transmit, or share any personal information. Specifically, the App:
+Test Your Speakers does not collect, store, transmit, sell, or share personal information. The app:
 
 - Does not collect your name, email address, or any personal identifiers
 - Does not access your contacts, photos, location, microphone, or camera
 - Does not track your usage or behavior
 - Does not use analytics or advertising SDKs
-- Does not transmit any data to external servers
+- Does not upload listening results, reports, settings, or audio to developer servers
 - Does not use cookies or tracking technologies
 
 ## How the App Works
 
-AudioPill operates entirely on your Apple TV device. All settings, setup-check summaries, and user preferences are stored locally on the device only. No data leaves your device.
+Test signals are generated on your Apple TV. Settings, completed-check state, and up to 20 speaker-check reports remain in the app's local container or Apple system storage on that device. Deleting the app removes its current local data, subject to Apple's normal backup and restore behavior.
 
 ## Third-Party Services
 
-AudioPill does not integrate with any third-party services, analytics platforms, or advertising networks.
+The app uses Apple's App Store and StoreKit services to load the localized Pro price, process or restore the one-time purchase, verify entitlements, and preserve access for eligible customers of the earlier paid app. Apple processes billing; the developer does not receive payment-card information. The app has no developer-operated backend and uses no advertising, analytics, tracking, authentication, or cloud-sync service.
+
+If you voluntarily use the separate support website's contact form, the name, email address, and message you enter are sent through FormSubmit to the support mailbox. That website discloses its handling terms before submission. This support form is not embedded in the Apple TV app.
 
 ## Children's Privacy
 
-AudioPill does not collect any information from anyone, including children under the age of 13.
+Test Your Speakers does not collect personal information from anyone, including children under the age of 13.
 
 ## Changes to This Policy
 

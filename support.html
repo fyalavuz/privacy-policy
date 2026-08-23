@@ -126,11 +126,14 @@ const APPS = {
     ],
   },
   audiopill: {
-    name: "AudioPill", emoji: "🔊", privacy: "audiopill-en",
-    tagline: "Home theater setup checker and audio diagnostic utility for Apple TV.",
+    name: "Test Your Speakers", emoji: "🔊", privacy: "audiopill-en",
+    privacySummary: "Speaker reports stay local; Apple handles the one-time Pro purchase. No ads, analytics, or tracking.",
+    tagline: "Check every home theater speaker and channel from your listening seat on Apple TV.",
     faq: [
-      ["A speaker test plays no sound on one channel.", "First check the same channel with another source (e.g. a movie with surround sound). If only AudioPill is silent, make sure your Apple TV audio output is set to the receiver/soundbar (Settings → Video and Audio → Audio Output) and not to TV speakers."],
-      ["Surround formats are not detected.", "Apple TV converts audio according to its own output settings. Set Audio Format on the Apple TV to Auto (or enable Dolby Atmos) under Settings → Video and Audio, then rerun the check."],
+      ["A speaker test plays no sound on one channel.", "First check that channel with another surround source. Then confirm Apple TV is sending audio to the intended receiver or soundbar. Test Your Speakers only offers layouts and channels the current output route reports that it can address."],
+      ["Does the app measure or calibrate my room automatically?", "No. Test Your Speakers generates reference signals and records what you confirm by ear. It does not use a microphone, measure sound-pressure level, or replace a calibrated room-measurement system."],
+      ["What is included for free?", "The first complete guided speaker check and its report are free. Channel ID, Tone, Noise, and Bass Sweep also stay free. Test Your Speakers Pro is one optional, non-consumable purchase for unlimited checks, report history, targeted rechecks, Full Sweep, and Phase."],
+      ["How do I restore Test Your Speakers Pro?", "Open Settings in the app and choose Restore Purchases while signed in to the Apple Account used for the purchase. Eligible customers of the earlier paid app keep Pro after Apple's verified purchase record is checked."],
     ],
   },
   "live-shader": {
