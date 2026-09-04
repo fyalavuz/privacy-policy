@@ -73,6 +73,19 @@ const COMMON_FAQ = [
 ];
 
 const APPS = {
+  tuner: {
+    name: "Tuner", emoji: "🎚️", privacy: "tuner-en.html",
+    privacySummary: "Microphone audio is analysed only on the device and is never recorded or transmitted. Tuner has no account, ads, analytics, or tracking.",
+    dataFaq: ["How does Tuner handle audio and data?", "Tuner analyses microphone audio in real time on your device to estimate pitch. Audio is never recorded, saved, or transmitted. Preferences and tuning history remain local. The app has no account, ads, analytics, tracking, or third-party SDKs. Read the privacy policy for details."],
+    tagline: "Tune guitar, bağlama, oud, violin-family instruments, and more on iPhone and iPad.",
+    faq: [
+      ["Tuner cannot hear my instrument.", "Open iOS Settings → Privacy & Security → Microphone and make sure Tuner is enabled. Return to the tuner screen and tap Retry. Play one sustained note close to the microphone."],
+      ["Why does the reading move around?", "Play one string or note at a time, mute nearby speakers, and let the note sustain. Strong background sound or several notes at once can make any pitch detector less stable."],
+      ["Which mode should I choose?", "Choose your instrument when you want string-specific targets. Choose Chromatic when you want Tuner to identify the nearest note without restricting the target to one instrument."],
+      ["Why did microphone analysis pause?", "The reference tone and other audio tools temporarily take control of the audio session. Returning to the tuner restarts microphone analysis automatically."],
+      ["Where are my settings and history stored?", "They stay in local Apple system storage on this device. Tuner does not send them to a developer server. You can clear tuning history inside the app."],
+    ],
+  },
   "single-stock": {
     name: "Single Stock", emoji: "📈", privacy: "single-stock.html",
     privacySummary: "Single Stock uses Apple storage and a market-data provider for quotes. It has no account, advertising, analytics, or tracking code.",
